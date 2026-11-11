@@ -44,7 +44,8 @@ main{max-width:620px;margin:auto;padding:14px 13px 28px}.panel{background:var(--
 <script>
 (()=>{
 const $=id=>document.getElementById(id);let items=JSON.parse(localStorage.getItem('warehouse-items-v1')||'[]');let history=JSON.parse(localStorage.getItem('warehouse-history-v1')||'[]');let stream=null,scanTimer=null;
-const save=()=>localStorage.setItem('warehouse-items-v1',JSON.stringify(items));\nconst saveHistory=()=>localStorage.setItem('warehouse-history-v1',JSON.stringify(history));
+const save=()=>localStorage.setItem('warehouse-items-v1',JSON.stringify(items));
+const saveHistory=()=>localStorage.setItem('warehouse-history-v1',JSON.stringify(history));
 const num=v=>Number(String(v).replace(',','.'));
 const fmt=n=>Number.isInteger(n)?String(n):String(Number(n.toFixed(3))).replace('.',',');
 function toast(s){const t=$('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
