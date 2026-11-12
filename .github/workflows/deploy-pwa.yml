@@ -7,6 +7,7 @@ on:
       - 'manifest.webmanifest'
       - 'sw.js'
       - 'icon.svg'
+      - 'contrast/**'
       - '.github/workflows/deploy-pwa.yml'
   workflow_dispatch:
 permissions:
