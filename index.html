@@ -49,7 +49,7 @@ const save=()=>localStorage.setItem('warehouse-items-v1',JSON.stringify(items));
 const saveHistory=()=>localStorage.setItem('warehouse-history-v1',JSON.stringify(history));
 const num=v=>Number(String(v).replace(',','.'));
 const fmt=n=>Number.isInteger(n)?String(n):String(Number(n.toFixed(3))).replace('.',',');
-function formatBarcode(code){const value=String(code||'');if(!/^\\d+$/.test(value))return value;const groups=[];let i=0;while(value.length-i>4){groups.push(value.slice(i,i+3));i+=3}if(i<value.length)groups.push(value.slice(i));return groups.join('-')}
+function formatBarcode(code){const value=String(code||'');if(!/^\d+$/.test(value))return value;const groups=[];let i=0;while(value.length-i>4){groups.push(value.slice(i,i+3));i+=3}if(i<value.length)groups.push(value.slice(i));return groups.join('-')}
 function toast(s){const t=$('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
 function render(){const body=$('itemsBody');body.innerHTML='';let total=items.reduce((a,x)=>a+x.qty,0);$('countLabel').textContent=items.length+' '+(items.length===1?'prekė':items.length<10?'prekės':'prekių');$('totalQty').textContent=fmt(total)+' vnt.';
 if(!items.length){const row=document.createElement('tr');const cell=document.createElement('td');cell.colSpan=3;cell.className='empty';cell.textContent='Sąrašas tuščias. Pridėk pirmą prekę.';row.append(cell);body.append(row);renderHistory();return}
