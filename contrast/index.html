@@ -91,13 +91,13 @@ function prepareContrastFrame(video,canvas,mode){
  ctx.putImageData(image,0,0);return true
 }
 function validEAN(code){
- if(!/^\\d{8}$|^\\d{12}$|^\\d{13}$/.test(code))return false;
+ if(!/^\d{8}$|^\d{12}$|^\d{13}$/.test(code))return false;
  let sum=0;for(let i=code.length-2,j=0;i>=0;i--,j++)sum+=Number(code[i])*(j%2===0?3:1);
  return (10-sum%10)%10===Number(code[code.length-1])
 }
 function acceptCode(raw,format){
- const code=String(raw||'').replace(/\\s/g,'');
- const eanLike=/^\\d{8}$|^\\d{12}$|^\\d{13}$/.test(code);
+ const code=String(raw||'').replace(/\s/g,'');
+ const eanLike=/^\d{8}$|^\d{12}$|^\d{13}$/.test(code);
  if(eanLike&&!validEAN(code))return false;
  if(!eanLike&&(format!=='code_128'||code.length<4||code.length>40))return false;
  if(code===lastAccepted)return false;
