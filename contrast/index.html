@@ -153,7 +153,7 @@ $('scanBtn').onclick=async()=>{
   const formats=['ean_13','ean_8','upc_a','code_128'];
   if('BarcodeDetector'in window){try{const supported=await BarcodeDetector.getSupportedFormats();const usable=formats.filter(f=>supported.includes(f));if(usable.length)detector=new BarcodeDetector({formats:usable})}catch(e){}}
   if(!detector&&await loadZXing()){
-   try{const hints=new Map();hints.set(ZXing.DecodeHintType.POSSIBLE_FORMATS,[ZXing.BarcodeFormat.EAN_13,ZXing.BarcodeFormat.EAN_8,ZXing.BarcodeFormat.UPC_A,ZXing.BarcodeFormat.CODE_128]);zxingReader=new ZXing.MultiFormatReader();zxingReader.setHints(hints)}catch(e){zxingReader=null}
+   try{const hints=new Map();hints.set(ZXing.DecodeHintType.POSSIBLE_FORMATS,[ZXing.BarcodeFormat.EAN_13,ZXing.BarcodeFormat.EAN_8,ZXing.BarcodeFormat.UPC_A,ZXing.BarcodeFormat.CODE_128]);zxingReader=new ZXing.BrowserMultiFormatReader(hints)}catch(e){zxingReader=null}
   }
   if(!detector&&!zxingReader){toast('Nepavyko įkelti barkodų dekoderio. Patikrink internetą.');return}
   stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'},width:{ideal:1920},height:{ideal:1080}},audio:false});
