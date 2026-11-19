@@ -11,7 +11,14 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 header{background:#fff;border-bottom:1px solid var(--line);padding:15px 16px 13px;position:sticky;top:0;z-index:3}header .top{display:flex;align-items:center;justify-content:space-between;gap:12px}h1{font-size:20px;margin:0;font-weight:800;letter-spacing:-.5px}.sub{font-size:12px;color:var(--muted);margin-top:3px}.pill{font-size:11px;font-weight:700;color:var(--green);background:#e8f6ef;padding:5px 9px;border-radius:30px}
 main{max-width:620px;margin:auto;padding:14px 13px 28px}.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px;box-shadow:var(--shadow)}.section-title{font-size:13px;font-weight:800;margin:0 0 11px}.field{display:flex;flex-direction:column;gap:5px;min-width:0}.field label{font-size:12px;color:var(--muted);font-weight:650}.field input{width:100%;height:47px;border:1px solid #dce2e8;border-radius:11px;padding:0 12px;font:inherit;font-size:16px;color:var(--ink);background:#fff;outline:none}.field input:focus{border-color:var(--blue);box-shadow:0 0 0 3px #1769e018}.scanrow{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:end}.formgrid{display:grid;grid-template-columns:1fr 110px;gap:9px;margin-top:10px}.btn{border:0;border-radius:11px;min-height:45px;padding:0 14px;font:700 14px system-ui;cursor:pointer}.btn:active{transform:scale(.98)}.primary{background:var(--blue);color:white}.soft{background:var(--blue2);color:var(--blue)}.neutral{background:#eef1f4;color:#283442}.danger{background:#fff0f0;color:var(--red)}.scanbtn{height:47px;white-space:nowrap}.addbtn{width:100%;margin-top:11px;height:48px;font-size:15px}.hint{font-size:11px;color:var(--muted);margin:9px 1px 0}.summary{display:flex;align-items:center;justify-content:space-between;gap:8px}.summary strong{font-size:20px}.summary span{font-size:12px;color:var(--muted)}.table-wrap{width:100%;overflow-x:auto;margin-top:12px;border:1px solid #cfd7e0;border-radius:12px;background:#fff}.items-table{width:100%;border-collapse:collapse;table-layout:fixed}.items-table th{font-size:10px;letter-spacing:.45px;color:#536273;background:#edf2f7;font-weight:850;text-align:left;padding:11px 7px;border:1px solid #cfd7e0}.items-table th:nth-child(2),.items-table td:nth-child(2){width:58px;text-align:center}.items-table th:nth-child(3),.items-table td:nth-child(3){width:106px;text-align:center}.items-table td{border:1px solid #d9e0e7;padding:10px 6px;vertical-align:middle;background:#fff}.items-table tbody tr:nth-child(even) td{background:#f8fafc}.items-table td.empty{text-align:center;padding:22px 8px;color:var(--muted);font-size:13px;background:#fff}.itemname{font-weight:850;font-size:15px;overflow-wrap:anywhere;line-height:1.3;color:#101a25}.barcode{font-size:12px;font-weight:650;color:#465565;margin-top:4px;overflow-wrap:anywhere}.qty{font-size:17px;font-weight:900;text-align:center;font-variant-numeric:tabular-nums;color:#101a25}#reviewContent .itemname{font-size:17px;font-weight:900;line-height:1.3}#reviewContent .barcode{font-size:13px;font-weight:700;color:#344456;margin-top:5px}#reviewContent .qty{font-size:19px;font-weight:900}#reviewContent .items-table th{font-size:12px;font-weight:900;padding:13px 8px}#reviewContent .items-table td{padding:13px 9px}.itemactions{display:flex;gap:2px;align-items:center;justify-content:center;white-space:nowrap}.mini{border:0;background:#f0f3f6;border-radius:6px;width:23px;min-width:23px;height:28px;padding:0;font-size:13px;font-weight:800;color:#263544}.mini.del{color:var(--red)}.empty{text-align:center;color:var(--muted);font-size:13px;padding:24px 8px}.history-list{display:flex;flex-direction:column;gap:8px;margin-top:12px}.history-entry{border:1px solid #d9e0e7;border-radius:11px;padding:11px;background:#fff}.history-date{font-size:13px;font-weight:850;color:#17212b}.history-meta{font-size:12px;color:#536273;margin-top:4px}.history-buttons{display:flex;gap:7px;margin-top:9px}.history-buttons .btn{min-height:36px;padding:0 11px;font-size:12px}.history-buttons .btn:first-child{flex:1}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions .btn{min-height:47px}.full{grid-column:1/-1}.hidden{display:none!important}dialog{border:0;border-radius:17px;padding:0;width:min(92vw,480px);box-shadow:0 18px 70px #0004}dialog::backdrop{background:#10182099}.modal{padding:16px}dialog#historyDetail{width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;border-radius:0;overflow:auto}#historyDetail .modal{min-height:100dvh;padding:calc(16px + env(safe-area-inset-top)) 14px calc(16px + env(safe-area-inset-bottom));display:flex;flex-direction:column}#historyDetail .modal h2{font-size:20px;margin-bottom:5px}#historyDetailContent{flex:1;min-height:0}#historyDetailContent .table-wrap{max-height:calc(100dvh - 190px)!important;overflow:auto}#historyDetailContent .items-table th{position:sticky;top:0;z-index:1}#historyDetail .modal-actions{position:sticky;bottom:0;background:#fff;padding-top:10px;margin-top:10px}.modal h2{font-size:18px;margin:0 0 8px}.modal p{font-size:13px;color:var(--muted)}video{display:block;width:100%;border-radius:12px;background:#101820;max-height:55vh}.scanner-view{position:relative;overflow:hidden;border-radius:12px;background:#101820}.scanner-view video{border-radius:12px}.scan-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}.scan-frame{position:relative;width:86%;height:30%;border:2px solid #fff;border-radius:12px;box-shadow:0 0 0 999px #07111b55,0 0 14px #0008}.scan-frame:before,.scan-frame:after{content:"";position:absolute;left:8%;right:8%;height:2px;background:#ffffff55}.scan-frame:before{top:0}.scan-frame:after{bottom:0}.scan-laser{position:absolute;left:0;right:0;top:0;height:2px;background:#ff3434;box-shadow:0 0 8px 2px #ff3434;animation:scanMove 2s ease-in-out infinite alternate}@keyframes scanMove{from{top:5%}to{top:95%}}.scan-guide{font-size:12px;color:#dbe5ef;text-align:center;margin-top:9px}.modal-actions{display:flex;gap:8px;margin-top:12px}.modal-actions .btn{flex:1}.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translate(-50%,20px);background:#182431;color:white;padding:11px 16px;border-radius:30px;font-size:13px;opacity:0;pointer-events:none;transition:.2s;z-index:10;max-width:90vw;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.install{font-size:12px;color:var(--blue);font-weight:700;background:none;border:0;padding:8px 0 0}
-#historyDetailContent .barcode{font-size:15px}</style>
+#historyDetailContent .barcode{font-size:15px}
+.scan-options{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:10px;font-size:13px}
+.scan-options label{display:flex;gap:6px;align-items:center}
+.scan-options button{min-height:34px}
+.preview-wrap{margin-top:10px}
+.preview-wrap canvas{display:block;width:100%;max-height:180px;object-fit:contain;background:#202832;border-radius:8px}
+.preview-label{font-size:11px;color:var(--muted);margin:5px 0}
+</style>
 </head>
 <body>
 <header><div class="top"><div><h1>Komplektavimas KONTRASTAS</h1><div class="sub">Raudonų etikečių skenavimo bandymas</div></div><span class="pill">VEIKIA OFFLINE</span></div><button class="install hidden" id="installBtn">＋ Įdiegti į telefoną</button></header>
@@ -39,29 +46,64 @@ main{max-width:620px;margin:auto;padding:14px 13px 28px}.panel{background:var(--
 <p class="hint">Užbaigti komplektai išsaugomi tik šiame telefone.</p>
 </section>
 </main>
-<dialog id="scanner"><div class="modal"><h2>Barkodo skenavimas</h2><p id="scanMessage">Nukreipk kamerą į EAN barkodą.</p><div class="scanner-view"><video id="video" playsinline muted></video><div class="scan-overlay" aria-hidden="true"><div class="scan-frame"><div class="scan-laser"></div></div></div></div><div class="scan-guide">Laikyk barkodą rėmelio viduje</div><div class="modal-actions"><button class="btn neutral" id="closeScan">Uždaryti</button></div></div></dialog>
+<dialog id="scanner"><div class="modal"><h2>Barkodo skenavimas</h2><p id="scanMessage">Nukreipk kamerą į EAN barkodą.</p><div class="scanner-view"><video id="video" playsinline muted></video><div class="scan-overlay" aria-hidden="true"><div class="scan-frame"><div class="scan-laser"></div></div></div></div><div class="scan-guide">Laikyk barkodą rėmelio viduje</div><div class="scan-options"><label><input type="checkbox" id="showProcessed"> Rodyti apdorotą vaizdą</label><button class="btn neutral" id="torchBtn" type="button">Žibintuvėlis: išj.</button><label id="zoomWrap" class="hidden">Zoom <input id="zoom" type="range" min="1" max="3" step=".1" value="1"></label></div><div id="previewWrap" class="preview-wrap hidden"><div class="preview-label">Vaizdas, siunčiamas dekoderiui:</div><canvas id="previewCanvas"></canvas></div><div class="modal-actions"><button class="btn neutral" id="closeScan">Uždaryti</button></div></div></dialog>
 <dialog id="historyDetail"><div class="modal"><h2 id="historyTitle">Komplekto istorija</h2><div id="historyDetailContent"></div><div class="modal-actions"><button class="btn neutral" id="closeHistoryDetail">Uždaryti</button></div></div></dialog>
 <div class="toast" id="toast"></div>
 <script>
 (()=>{
-const $=id=>document.getElementById(id);const loadWarnings=[];function loadArray(key){const raw=localStorage.getItem(key);if(!raw)return[];try{const value=JSON.parse(raw);if(!Array.isArray(value))throw new Error('Stored value is not an array');return value}catch(error){try{localStorage.setItem(key+'-recovery-backup',raw)}catch(storageError){}loadWarnings.push(key);return[]}}let items=loadArray('warehouse-contrast-items-v1').filter(x=>x&&typeof x==='object'&&typeof x.code==='string'&&Number.isFinite(Number(x.qty))&&Number(x.qty)>0).map(x=>({code:x.code,name:String(x.name||''),qty:Number(x.qty)}));let history=loadArray('warehouse-contrast-history-v1').filter(x=>x&&typeof x==='object'&&Array.isArray(x.items));let stream=null,scanTimer=null;
+const $=id=>document.getElementById(id);const loadWarnings=[];function loadArray(key){const raw=localStorage.getItem(key);if(!raw)return[];try{const value=JSON.parse(raw);if(!Array.isArray(value))throw new Error('Stored value is not an array');return value}catch(error){try{localStorage.setItem(key+'-recovery-backup',raw)}catch(storageError){}loadWarnings.push(key);return[]}}let items=loadArray('warehouse-contrast-items-v1').filter(x=>x&&typeof x==='object'&&typeof x.code==='string'&&Number.isFinite(Number(x.qty))&&Number(x.qty)>0).map(x=>({code:x.code,name:String(x.name||''),qty:Number(x.qty)}));let history=loadArray('warehouse-contrast-history-v1').filter(x=>x&&typeof x==='object'&&Array.isArray(x.items));let stream=null,scanTimer=null,detector=null,zxingReader=null,scanBusy=false,frameNo=0,torchOn=false,track=null,lastAccepted='';
 const save=()=>localStorage.setItem('warehouse-items-v1',JSON.stringify(items));
 const saveHistory=()=>localStorage.setItem('warehouse-history-v1',JSON.stringify(history));
 const num=v=>Number(String(v).replace(',','.'));
 const fmt=n=>Number.isInteger(n)?String(n):String(Number(n.toFixed(3))).replace('.',',');
 function formatBarcode(code){const value=String(code||'');if(!/^\d+$/.test(value))return value;const groups=[];let i=0;while(value.length-i>4){groups.push(value.slice(i,i+3));i+=3}if(i<value.length)groups.push(value.slice(i));return groups.join('-')}
-function prepareContrastFrame(video,canvas){
- const w=video.videoWidth,h=video.videoHeight;if(!w||!h)return false;
- const scale=Math.min(1,640/w);canvas.width=Math.max(1,Math.round(w*scale));canvas.height=Math.max(1,Math.round(h*scale));
- const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.drawImage(video,0,0,canvas.width,canvas.height);
- const image=ctx.getImageData(0,0,canvas.width,canvas.height),d=image.data,hist=new Uint32Array(256);let total=0,sum=0;
- for(let i=0;i<d.length;i+=4){const v=d[i];hist[v]++;sum+=v;total++}
- let sumB=0,wB=0,max=-1,threshold=128;
- for(let t=0;t<256;t++){wB+=hist[t];if(!wB)continue;const wF=total-wB;if(!wF)break;sumB+=t*hist[t];const mB=sumB/wB,mF=(sum-sumB)/wF;const between=wB*wF*(mB-mF)*(mB-mF);if(between>max){max=between;threshold=t}}
- threshold=Math.max(12,Math.min(245,threshold));
- for(let i=0;i<d.length;i+=4){const out=d[i]>threshold?255:0;d[i]=d[i+1]=d[i+2]=out;d[i+3]=255}
+function otsuThreshold(hist,total){
+ let sum=0;for(let i=0;i<256;i++)sum+=i*hist[i];
+ let sumB=0,wB=0,best=-1,tBest=127;
+ for(let t=0;t<256;t++){wB+=hist[t];if(!wB)continue;const wF=total-wB;if(!wF)break;sumB+=t*hist[t];const d=sumB/wB-(sum-sumB)/wF,score=wB*wF*d*d;if(score>best){best=score;tBest=t}}
+ return tBest
+}
+function percentile(hist,total,p){const target=Math.max(1,Math.floor(total*p));let n=0;for(let i=0;i<256;i++){n+=hist[i];if(n>=target)return i}return 255}
+function prepareContrastFrame(video,canvas,mode){
+ const vw=video.videoWidth,vh=video.videoHeight;if(!vw||!vh)return false;
+ const cropH=Math.round(vh*.5),scale=Math.min(1,1200/vw);
+ canvas.width=Math.max(1,Math.round(vw*scale));canvas.height=Math.max(1,Math.round(cropH*scale));
+ const ctx=canvas.getContext('2d',{willReadFrequently:true});
+ ctx.drawImage(video,0,Math.round((vh-cropH)/2),vw,cropH,0,0,canvas.width,canvas.height);
+ const image=ctx.getImageData(0,0,canvas.width,canvas.height),d=image.data,n=d.length/4,gray=new Uint8Array(n),hist=new Uint32Array(256);
+ for(let p=0,j=0;p<d.length;p+=4,j++){const v=mode==='gray'?Math.round(.299*d[p]+.587*d[p+1]+.114*d[p+2]):d[p];gray[j]=v;hist[v]++}
+ const lo=percentile(hist,n,.01),hi=percentile(hist,n,.99),range=Math.max(1,hi-lo),stretched=new Uint8Array(n),hist2=new Uint32Array(256);
+ for(let i=0;i<n;i++){const v=Math.max(0,Math.min(255,Math.round((gray[i]-lo)*255/range)));stretched[i]=v;hist2[v]++}
+ if(mode==='adaptive'){
+  const w=canvas.width,h=canvas.height,r=12,integral=new Float64Array((w+1)*(h+1));
+  for(let y=1;y<=h;y++){let row=0;for(let x=1;x<=w;x++){row+=stretched[(y-1)*w+x-1];integral[y*(w+1)+x]=integral[(y-1)*(w+1)+x]+row}}
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+   const x1=Math.max(0,x-r),y1=Math.max(0,y-r),x2=Math.min(w-1,x+r),y2=Math.min(h-1,y+r),area=(x2-x1+1)*(y2-y1+1);
+   const sum=integral[(y2+1)*(w+1)+x2+1]-integral[y1*(w+1)+x2+1]-integral[(y2+1)*(w+1)+x1]+integral[y1*(w+1)+x1];
+   const v=stretched[y*w+x]>(sum/area-9)?255:0,j=(y*w+x)*4;d[j]=d[j+1]=d[j+2]=v;d[j+3]=255
+  }
+ }else if(mode==='otsu'){
+  const threshold=otsuThreshold(hist2,n);
+  for(let i=0;i<n;i++){const v=stretched[i]>threshold?255:0,j=i*4;d[j]=d[j+1]=d[j+2]=v;d[j+3]=255}
+ }else{
+  for(let i=0;i<n;i++){const v=stretched[i],j=i*4;d[j]=d[j+1]=d[j+2]=v;d[j+3]=255}
+ }
  ctx.putImageData(image,0,0);return true
 }
+function validEAN(code){
+ if(!/^\\d{8}$|^\\d{12}$|^\\d{13}$/.test(code))return false;
+ let sum=0;for(let i=code.length-2,j=0;i>=0;i--,j++)sum+=Number(code[i])*(j%2===0?3:1);
+ return (10-sum%10)%10===Number(code[code.length-1])
+}
+function acceptCode(raw,format){
+ const code=String(raw||'').replace(/\\s/g,'');
+ const eanLike=/^\\d{8}$|^\\d{12}$|^\\d{13}$/.test(code);
+ if(eanLike&&!validEAN(code))return false;
+ if(!eanLike&&(format!=='code_128'||code.length<4||code.length>40))return false;
+ if(code===lastAccepted)return false;
+ lastAccepted=code;$('barcode').value=code;stopCamera();$('productName').focus();toast('Barkodas nuskaitytas: '+code);return true
+}
+
 function toast(s){const t=$('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
 function render(){const body=$('itemsBody');body.innerHTML='';let total=items.reduce((a,x)=>a+x.qty,0);$('countLabel').textContent=items.length+' '+(items.length===1?'prekė':items.length<10?'prekės':'prekių');$('totalQty').textContent=fmt(total)+' vnt.';
 if(!items.length){const row=document.createElement('tr');const cell=document.createElement('td');cell.colSpan=3;cell.className='empty';cell.textContent='Sąrašas tuščias. Pridėk pirmą prekę.';row.append(cell);body.append(row);renderHistory();return}
@@ -79,8 +121,57 @@ function deleteHistoryEntry(id){if(!confirm('Ištrinti šį įrašą iš istorij
 $('clearHistoryBtn').onclick=()=>{if(!history.length)return;if(confirm('Tikrai išvalyti VISĄ komplektų istoriją? Šio veiksmo atšaukti negalima.')){history=[];saveHistory();renderHistory();toast('Istorija išvalyta')}};
 $('closeHistoryDetail').onclick=()=>$('historyDetail').close();
 $('finishBtn').onclick=()=>{if(!items.length){toast('Nėra ką užbaigti');return}if(!confirm('Ar tikrai baigti komplektą? Jis bus išsaugotas istorijoje, o dabartinis sąrašas išvalytas.'))return;const snapshot=items.map(it=>({code:it.code,name:it.name||'',qty:Number(it.qty)}));const completedId=String(Date.now())+'-'+Math.random().toString(36).slice(2,8);history.unshift({id:completedId,completedAt:new Date().toISOString(),items:snapshot});saveHistory();items=[];save();render();showHistoryEntry(completedId);toast('Komplektas išsaugotas istorijoje')};
-async function stopCamera(){if(scanTimer)clearInterval(scanTimer);scanTimer=null;if(stream)stream.getTracks().forEach(t=>t.stop());stream=null;$('video').srcObject=null;if($('scanner').open)$('scanner').close()}
-$('closeScan').onclick=stopCamera;$('scanBtn').onclick=async()=>{if(!navigator.mediaDevices?.getUserMedia){toast('Kamera šiame įrenginyje nepalaikoma');return}if(!('BarcodeDetector'in window)){toast('Ši naršyklė nepalaiko automatinio barkodų skaitymo. Įvesk ranka.');return}try{const detector=new BarcodeDetector({formats:['ean_13','ean_8','upc_a','upc_e','code_128']});stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'}},audio:false});$('video').srcObject=stream;$('scanner').showModal();await $('video').play();$('scanMessage').textContent='Sustiprintas raudono fono kontrastas.';const canvas=document.createElement('canvas');let scanBusy=false,lastFallback=0;scanTimer=setInterval(async()=>{if(scanBusy)return;scanBusy=true;try{let codes=await detector.detect($('video'));const now=performance.now();if(!codes.length&&now-lastFallback>=650){lastFallback=now;if(prepareContrastFrame($('video'),canvas))codes=await detector.detect(canvas)}if(codes.length){$('barcode').value=codes[0].rawValue;stopCamera();$('productName').focus();toast('Barkodas nuskaitytas')}}catch(e){}finally{scanBusy=false}},250)}catch(e){toast('Nepavyko įjungti kameros. Patikrink leidimą.');stopCamera()}};
+async function loadZXing(){
+ if(window.ZXing)return true;
+ try{await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='https://unpkg.com/@zxing/library@0.21.3/umd/index.min.js';script.onload=resolve;script.onerror=reject;document.head.append(script)});return !!window.ZXing}catch(e){return false}
+}
+async function decodeCanvas(canvas){
+ if(detector){try{const results=await detector.detect(canvas);for(const r of results){if(acceptCode(r.rawValue,r.format))return true}}catch(e){}}
+ if(zxingReader){try{const result=zxingReader.decodeFromCanvas(canvas);if(result&&acceptCode(result.getText(),String(result.getBarcodeFormat()).toLowerCase().includes('code_128')?'code_128':'ean'))return true}catch(e){}}
+ return false
+}
+async function setupCameraControls(){
+ track=stream&&stream.getVideoTracks()[0];if(!track)return;
+ const caps=track.getCapabilities?track.getCapabilities():{};
+ if(caps.focusMode&&caps.focusMode.includes('continuous')){try{await track.applyConstraints({advanced:[{focusMode:'continuous'}]})}catch(e){}}
+ $('torchBtn').classList.toggle('hidden',!caps.torch);
+ if(caps.zoom){$('zoom').min=caps.zoom.min||1;$('zoom').max=Math.min(caps.zoom.max||3,4);$('zoom').step=caps.zoom.step||.1;$('zoom').value=caps.zoom.min||1;$('zoomWrap').classList.remove('hidden')}else $('zoomWrap').classList.add('hidden')
+}
+$('torchBtn').onclick=async()=>{if(!track)return;try{torchOn=!torchOn;await track.applyConstraints({advanced:[{torch:torchOn}]});$('torchBtn').textContent='Žibintuvėlis: '+(torchOn?'įj.':'išj.')}catch(e){torchOn=false;toast('Žibintuvėlis nepalaikomas')}};
+$('zoom').oninput=async e=>{if(!track)return;try{await track.applyConstraints({advanced:[{zoom:Number(e.target.value)}]})}catch(e){}};
+$('showProcessed').onchange=e=>$('previewWrap').classList.toggle('hidden',!e.target.checked);
+async function stopCamera(){
+ if(scanTimer)clearInterval(scanTimer);scanTimer=null;
+ if(stream)stream.getTracks().forEach(t=>t.stop());stream=null;track=null;torchOn=false;
+ $('video').srcObject=null;if($('scanner').open)$('scanner').close()
+}
+$('closeScan').onclick=stopCamera;
+$('scanBtn').onclick=async()=>{
+ if(!navigator.mediaDevices?.getUserMedia){toast('Kamera šiame įrenginyje nepalaikoma');return}
+ try{
+  detector=null;zxingReader=null;
+  const formats=['ean_13','ean_8','upc_a','code_128'];
+  if('BarcodeDetector'in window){try{const supported=await BarcodeDetector.getSupportedFormats();const usable=formats.filter(f=>supported.includes(f));if(usable.length)detector=new BarcodeDetector({formats:usable})}catch(e){}}
+  if(!detector&&await loadZXing()){
+   try{const hints=new Map();hints.set(ZXing.DecodeHintType.POSSIBLE_FORMATS,[ZXing.BarcodeFormat.EAN_13,ZXing.BarcodeFormat.EAN_8,ZXing.BarcodeFormat.UPC_A,ZXing.BarcodeFormat.CODE_128]);zxingReader=new ZXing.MultiFormatReader();zxingReader.setHints(hints)}catch(e){zxingReader=null}
+  }
+  if(!detector&&!zxingReader){toast('Nepavyko įkelti barkodų dekoderio. Patikrink internetą.');return}
+  stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'},width:{ideal:1920},height:{ideal:1080}},audio:false});
+  $('video').srcObject=stream;$('scanner').showModal();await $('video').play();await setupCameraControls();
+  $('scanMessage').textContent='Skenuojama: raudonas kanalas, vietinis slenkstis, Otsu ir pilkas vaizdas.';
+  const canvas=document.createElement('canvas');scanBusy=false;frameNo=0;lastAccepted='';
+  scanTimer=setInterval(async()=>{
+   if(scanBusy||!$('video').videoWidth)return;scanBusy=true;
+   try{
+    const modes=['red','adaptive','otsu','gray'],mode=modes[frameNo%4];frameNo++;
+    if(prepareContrastFrame($('video'),canvas,mode)){
+     if($('showProcessed').checked){const pc=$('previewCanvas');pc.width=canvas.width;pc.height=canvas.height;pc.getContext('2d').drawImage(canvas,0,0)}
+     await decodeCanvas(canvas)
+    }
+   }catch(e){console.debug('Kadro dekodavimo klaida',e)}finally{scanBusy=false}
+  },180)
+ }catch(e){toast('Nepavyko įjungti kameros. Patikrink leidimą.');await stopCamera()}
+};
 let installPrompt=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;$('installBtn').classList.remove('hidden')});$('installBtn').onclick=async()=>{if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;$('installBtn').classList.add('hidden')}else toast('Naršyklės meniu pasirink „Įdiegti programą“')};
 if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 render();if(loadWarnings.length)toast('Aptikti sugadinti išsaugoti duomenys. Jų kopija palikta atkūrimui.');
