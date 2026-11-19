@@ -66,7 +66,7 @@ function otsuThreshold(hist,total){
 function percentile(hist,total,p){const target=Math.max(1,Math.floor(total*p));let n=0;for(let i=0;i<256;i++){n+=hist[i];if(n>=target)return i}return 255}
 function prepareContrastFrame(video,canvas,mode){
  const vw=video.videoWidth,vh=video.videoHeight;if(!vw||!vh)return false;
- const cropH=Math.round(vh*.5),scale=Math.min(1,1200/vw);
+ const cropH=Math.round(vh*.75),scale=Math.min(1,1600/vw);
  canvas.width=Math.max(1,Math.round(vw*scale));canvas.height=Math.max(1,Math.round(cropH*scale));
  const ctx=canvas.getContext('2d',{willReadFrequently:true});
  ctx.drawImage(video,0,Math.round((vh-cropH)/2),vw,cropH,0,0,canvas.width,canvas.height);
@@ -163,10 +163,15 @@ $('scanBtn').onclick=async()=>{
   scanTimer=setInterval(async()=>{
    if(scanBusy||!$('video').videoWidth)return;scanBusy=true;
    try{
-    const modes=['red','adaptive','otsu','gray'],mode=modes[frameNo%4];frameNo++;
-    if(prepareContrastFrame($('video'),canvas,mode)){
-     if($('showProcessed').checked){const pc=$('previewCanvas');pc.width=canvas.width;pc.height=canvas.height;pc.getContext('2d').drawImage(canvas,0,0)}
-     await decodeCanvas(canvas)
+    // Pirmiausia bandome originalų, pilnos raiškos kameros kadrą – tai padeda mažiems barkodams.
+    let found=false;
+    if(detector){try{const raw=await detector.detect($('video'));for(const r of raw){if(acceptCode(r.rawValue,r.format)){found=true;break}}}catch(e){}}
+    if(!found){
+     const modes=['red','adaptive','otsu','gray'],mode=modes[frameNo%4];frameNo++;
+     if(prepareContrastFrame($('video'),canvas,mode)){
+      if($('showProcessed').checked){const pc=$('previewCanvas');pc.width=canvas.width;pc.height=canvas.height;pc.getContext('2d').drawImage(canvas,0,0)}
+      await decodeCanvas(canvas)
+     }
     }
    }catch(e){console.debug('Kadro dekodavimo klaida',e)}finally{scanBusy=false}
   },180)
